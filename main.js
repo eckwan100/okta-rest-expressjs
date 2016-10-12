@@ -23,10 +23,8 @@ app.get('/', function(request, response) {
 
 app.post('/get_user', urlencodedParser, function(req, res) {
 
-  console.log(req.body.loginName);
-
   var options = {
-    uri: 'https://edwindemo.oktapreview.com/api/v1/users/ab@heroku.com',
+    uri: 'https://edwindemo.oktapreview.com/api/v1/users/:loginName',
     method: 'GET',
     json: true,
     headers: {
