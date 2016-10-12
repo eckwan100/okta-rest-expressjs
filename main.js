@@ -57,7 +57,7 @@ request(options).then(function (response){
     console.log(err);
 })
 */
-
+});
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
