@@ -1,5 +1,5 @@
 var express = require('express');
-//var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 var app = express();
 // create application/json parser 
 //var jsonParser = bodyParser.json()
