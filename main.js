@@ -1,5 +1,11 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+// create application/json parser 
+var jsonParser = bodyParser.json()
+ 
+// create application/x-www-form-urlencoded parser 
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -10,11 +16,10 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  //response.render('index');
   response.render('index');
 });
 
-app.post('/process_get', function (req, res) {
+app.post('/process_get', urlencodedParser, function (req, res) {
    // Prepare output in JSON format
    response = {
       firstName:req.body.firstName,
