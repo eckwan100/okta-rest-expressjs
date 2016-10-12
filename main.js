@@ -22,9 +22,13 @@ app.get('/', function(request, response) {
 });
 
 app.post('/get_user', function(req, res) {
+  var baseUrl = 'https://edwindemo.oktapreview.com/api/v1/users/';
+  var resourcePath = req.body.login;
+  var finalUrl = baseUrl + resourcePath;
+  console.log(finalUrl);
 
   var options = {
-    uri: 'https://edwindemo.oktapreview.com/api/v1/users/' + req.body.login,
+    uri: finalUrl,
     method: 'GET',
     json: true,
     headers: {
