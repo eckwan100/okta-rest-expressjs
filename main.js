@@ -21,10 +21,31 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
+app.get('/get_user', function(req, res) {
+  
+  var options = {
+    uri: 'https://edwindemo.oktapreview.com/api/v1/users/ab@heroku.com',
+    method: 'GET',
+    json: true,
+    headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'SSWS 00seiYOZWjGKD0vTgY4a5l0ZGNPaEeA2Sg8WSrUXYk'
+    }
+  };
+
+  request(options).then(function (response){
+      res.status(200).json(response);
+  })
+  .catch(function (err) {
+      console.log(err);
+  })
+
+});
+
 app.post('/create_user', urlencodedParser, function (req, res) {
 
   var options = {
-      uri: 'https://edwindemo.oktapreview.com/api/v1/usersa?activate=false',
+      uri: 'https://edwindemo.oktapreview.com/api/v1/users?activate=false',
       method: 'POST',
       json: true,
       headers: {
@@ -45,11 +66,13 @@ app.post('/create_user', urlencodedParser, function (req, res) {
       res.status(200).json(response);
   })
   .catch(function (err) {
-      res.status(500).json(response);
       console.log(err);
   })
 
 });
+
+
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
