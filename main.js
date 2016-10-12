@@ -25,6 +25,7 @@ app.get('/get_user', function(req, res) {
 
   var options = {
     uri: 'https://edwindemo.oktapreview.com/api/v1/users/',
+    path: req.body.login,
     method: 'GET',
     json: true,
     headers: {
