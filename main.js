@@ -14,15 +14,15 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-/*app.get('/process_get', function (req, res) {
+app.post('/process_get', function (req, res) {
    // Prepare output in JSON format
    response = {
-      username:req.query.username,
-      password:req.query.password
+      firstName:req.body.firstName,
+      lastName:req.body.lastName
    };
    console.log(response);
    res.end(JSON.stringify(response));
-})*/
+})
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
