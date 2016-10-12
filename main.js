@@ -31,14 +31,7 @@ app.post('/create_user', urlencodedParser, function (req, res) {
           'Content-Type': 'application/json',
           'Authorization': 'SSWS 00seiYOZWjGKD0vTgY4a5l0ZGNPaEeA2Sg8WSrUXYk'
       },
-      body: JSON.stringify({
-        profile: {
-          firstName: req.body.firstName,
-          lastName: req.body.lastName,
-          email: req.body.email,
-          login: req.body.email
-        }
-      })
+      body: JSON.stringify({profile: {firstName: req.body.firstName,lastName: req.body.lastName,email: req.body.email,login: req.body.email}})
   };
 
    // Prepare output in JSON format
