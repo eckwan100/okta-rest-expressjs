@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-app.post('/process_get', urlencodedParser, function (req, res) {
+/*app.post('/process_get', urlencodedParser, function (req, res) {
    // Prepare output in JSON format
    response = {
       firstName:req.body.firstName,
@@ -27,7 +27,7 @@ app.post('/process_get', urlencodedParser, function (req, res) {
    };
    console.log(response);
    res.end(JSON.stringify(response));
-})
+})*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
