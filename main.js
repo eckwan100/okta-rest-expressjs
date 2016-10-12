@@ -25,6 +25,7 @@ app.post('/get_user', function(req, res) {
   var baseUrl = 'https://edwindemo.oktapreview.com/api/v1/users/';
   var resourcePath = req.body.login;
   var finalUrl = baseUrl + resourcePath;
+  console.log('HAHAHAHA');
   console.log(finalUrl);
 
   var options = {
