@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
 
 app.post('/get_user', function(req, res) {
 
-  console.log('HAHAHAHA');
+  console.log(req.body.loginName);
 
   var options = {
     uri: 'https://edwindemo.oktapreview.com/api/v1/users/ab@heroku.com',
