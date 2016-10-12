@@ -22,7 +22,7 @@ app.get('/', function(request, response) {
 });
 
 app.post('/create_user', urlencodedParser, function (req, res) {
-
+/*
   var options = {
       host: 'https://edwindemo.oktapreview.com',
       port: 443,
@@ -49,14 +49,14 @@ app.post('/create_user', urlencodedParser, function (req, res) {
    };
    console.log(response);
    res.end(JSON.stringify(response));
-*/
+
 request(options).then(function (response){
     res.status(200).json(response);
 })
 .catch(function (err) {
     console.log(err);
 })
-
+*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
