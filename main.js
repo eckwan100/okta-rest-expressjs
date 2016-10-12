@@ -1,11 +1,11 @@
 var express = require('express');
-var bodyParser = require('body-parser');
+//var bodyParser = require('body-parser');
 var app = express();
 // create application/json parser 
-var jsonParser = bodyParser.json()
+//var jsonParser = bodyParser.json()
  
 // create application/x-www-form-urlencoded parser 
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+//var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.set('port', (process.env.PORT || 5000));
 
