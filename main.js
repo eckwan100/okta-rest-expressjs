@@ -22,9 +22,9 @@ app.get('/', function(request, response) {
 });
 
 app.get('/get_user', function(req, res) {
-  
+  var login = req.body.login;
   var options = {
-    uri: 'https://edwindemo.oktapreview.com/api/v1/users/ab@heroku.com',
+    uri: 'https://edwindemo.oktapreview.com/api/v1/users/' + login,
     method: 'GET',
     json: true,
     headers: {
