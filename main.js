@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-app.get('/get_user', function(req, res) {
+app.post('/get_user', function(req, res) {
 
   var options = {
     uri: 'https://edwindemo.oktapreview.com/api/v1/users/:login',
