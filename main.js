@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
 app.post('/create_user', urlencodedParser, function (req, res) {
 
   var options = {
-      uri: 'https://edwindemo.oktapreview.com/api/v1?activate=false',
+      uri: 'https://edwindemo.oktapreview.com/api/v1/users?activate=false',
       method: 'POST',
       json: true,
       headers: {
