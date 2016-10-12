@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
 app.post('/get_user', urlencodedParser, function(req, res) {
 
   var options = {
-    uri: 'https://edwindemo.oktapreview.com/api/v1/users/' + req.body.loginName,
+    uri: 'https://edwindemo.oktapreview.com/api/v1/users/' + req.body.login,
     method: 'GET',
     json: true,
     headers: {
