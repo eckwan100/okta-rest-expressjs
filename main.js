@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
 app.post('/create_user', urlencodedParser, function (req, res) {
 
   var options = {
-      uri: 'https://edwindemo.oktapreview.com/api/v1/users?activate=false',
+      uri: 'https://edwindemo.oktapreview.com/api/v1/usersa?activate=false',
       method: 'POST',
       json: true,
       headers: {
@@ -41,18 +41,11 @@ app.post('/create_user', urlencodedParser, function (req, res) {
       }
   };
 
-   // Prepare output in JSON format
-   /*response = {
-      firstName:req.body.firstName,
-      lastName:req.body.lastName
-   };
-   console.log(response);
-   res.end(JSON.stringify(response));
-  */
   request(options).then(function (response){
       res.status(200).json(response);
   })
   .catch(function (err) {
+      res.status(500).json(response);
       console.log(err);
   })
 
