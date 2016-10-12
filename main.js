@@ -24,10 +24,9 @@ app.get('/', function(request, response) {
 app.post('/create_user', urlencodedParser, function (req, res) {
 
   var options = {
-      host: 'https://edwindemo.oktapreview.com',
-      port: 443,
-      path: '/api/v1?activate=false',
+      uri: 'https://edwindemo.oktapreview.com:443/api/v1?activate=false',
       method: 'POST',
+      json: true,
       headers: {
           'Content-Type': 'application/json',
           'Authorization': 'SSWS 00seiYOZWjGKD0vTgY4a5l0ZGNPaEeA2Sg8WSrUXYk'
