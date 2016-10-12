@@ -10,7 +10,8 @@
     "ejs": "~1.0.0",
     "express": "~4.9.8",
     "body-parser": "1.13.x",
-    "request-promise": "4.x.x"
+    "request-promise": "4.x.x",
+    "request": "4.x.x"
   },
   "author": "",
   "license": "ISC"
