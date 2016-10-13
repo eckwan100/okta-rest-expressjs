@@ -38,11 +38,7 @@ app.post('/get_user', urlencodedParser, function(req, res) {
   })
   .catch(function(err){ // if rp.get rejects (e.g. 500), do this:
     var respErr  = JSON.parse(err.error);
-    var errorResult = {
-        origUrl: respErr.origUrl,
-        error: respErr
-    };
-    results.push(errorResult); // push an object with some of the error info into results
+    results.push(respErr); // push an object with some of the error info into results
 });
 
 
