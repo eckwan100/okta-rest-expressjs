@@ -37,7 +37,7 @@ app.post('/get_user', urlencodedParser, function(req, res) {
       res.status(200).json(response);
   })
   .catch(function(err) {
-    if (res.json(err.statusCode) == 404) {
+    if (err.statusCode  == 404) {
       res.write('<h1>YA</h1>');
     } else {
       res.write('<h1>Nooooo</h1>');
