@@ -39,8 +39,10 @@ app.post('/get_user', urlencodedParser, function(req, res) {
   .catch(function(err) {
     if (err.statusCode  == 404) {
       res.write('<h1>YA</h1>');
+      res.end();
     } else {
       res.write('<h1>Nooooo</h1>');
+      res.end();
     }
   });
 
