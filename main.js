@@ -36,9 +36,16 @@ app.post('/get_user', urlencodedParser, function(req, res) {
   request(options).then(function (response){
       res.status(200).json(response);
   })
-  .catch(process, handleError);
-
+ .catch(function(err){ // if rp.get rejects (e.g. 500), do this:
+    should.throw.error.to.console(); // test if something is thrown (but nothing has been!)
+    var respErr  = JSON.parse(err.error);
+    var errorResult = {
+        origUrl: respErr.origUrl,
+        error: respErr
+    };
+    results.push(errorResult); // push an object with some of the error info into results
 });
+
 
 app.post('/create_user', urlencodedParser, function (req, res) {
 
