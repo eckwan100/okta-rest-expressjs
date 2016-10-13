@@ -42,8 +42,7 @@ app.post('/get_user', urlencodedParser, function(req, res) {
     } else {
       res.write('<h1>Nooooo</h1>');
     }
-  }
-});
+  });
 
 
 
