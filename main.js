@@ -37,7 +37,7 @@ app.post('/get_user', urlencodedParser, function(req, res) {
       res.status(200).json(response);
   })
   .catch(function(err) {
-    res.json(err);
+    res.json(err.statusCode);
   });
 
 
