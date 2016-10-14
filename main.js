@@ -29,7 +29,7 @@ app.post('/get_user', urlencodedParser, function(req, res) {
     json: true,
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'SSWS 00seiYOZWjGKD0vTgY4a5l0ZGNPaEeA2Sg8WSrUXYk'
+        'Authorization': 'SSWS API-KEY'
     }
   };
 
@@ -58,7 +58,7 @@ app.post('/create_user', urlencodedParser, function (req, res) {
       json: true,
       headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'SSWS 00seiYOZWjGKD0vTgY4a5l0ZGNPaEeA2Sg8WSrUXYk'
+          'Authorization': 'SSWS API-KEY'
       },
       body: {
         profile: {
