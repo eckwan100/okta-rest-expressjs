@@ -38,10 +38,10 @@ app.post('/get_user', urlencodedParser, function(req, res) {
   })
   .catch(function(err) {
     if (err.statusCode  == 404) {
-      res.write('<h2>No such user</h2>');
+      res.write('No such user');
       res.end();
     } else {
-      res.write('<h2>BAD BAD</h2>');
+      res.write('Bad request');
       res.end();
     }
   });
