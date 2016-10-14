@@ -38,10 +38,10 @@ app.post('/get_user', urlencodedParser, function(req, res) {
   })
   .catch(function(err) {
     if (err.statusCode  == 404) {
-      res.write('<h1>YA</h1>');
+      res.write('<h2>No such user</h2>');
       res.end();
     } else {
-      res.write('<h1>Nooooo</h1>');
+      res.write('<h2>BAD BAD</h2>');
       res.end();
     }
   });
@@ -74,6 +74,7 @@ app.post('/create_user', urlencodedParser, function (req, res) {
       res.status(200).json(response);
   })
   .catch(function (err) {
+    res.json(err);
       console.log(err);
   })
 
